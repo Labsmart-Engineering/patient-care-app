@@ -27,3 +27,8 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= button_to "Continue with Google", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %><br />
+  <% end %>
+<% end %>
