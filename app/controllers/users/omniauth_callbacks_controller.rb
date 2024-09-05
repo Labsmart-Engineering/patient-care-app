@@ -14,7 +14,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         user = User.from_omniauth(auth)
         redirect_to root_path, notice: "Avatar URL and Google ID is updated"
       else
-        redirect_to root_path, alert: "Email are not matching"
+        redirect_to root_path, alert: "Emails are not matching"
       end
     else
       user = User.from_omniauth(auth)
@@ -27,7 +27,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
     end
   end
+
   private
+
   def auth
     @auth ||= request.env['omniauth.auth']
   end
