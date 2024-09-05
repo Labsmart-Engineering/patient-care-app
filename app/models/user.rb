@@ -7,14 +7,12 @@ class User < ApplicationRecord
 
   def self.from_omniauth(auth)
     user = where(email: auth.info.email).first do |u|
-      u.provider = auth.provider
-      u.uid = auth.uid
+      u.google_auth_uid = auth.uid
     end
 
     if user.present?
       user.avatar_url = auth.info.image
-      user.provider = auth.provider
-      user.uid = auth.uid
+      user.google_auth_uid = auth.uid
       user.save
       user
     else
