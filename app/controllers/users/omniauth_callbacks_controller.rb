@@ -18,7 +18,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   #This function connects the user with the google
   def connect_with_google
     if current_user.email == auth.info.email
-      User.update_user_credentials(current_user, auth)
+      current_user.update_user_credentials(auth)
       redirect_to root_path, notice: "User is connected with google"
     else
       redirect_to root_path, alert: "Use your registered Labsmart email for google login"

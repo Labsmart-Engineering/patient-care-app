@@ -17,9 +17,9 @@ class User < ApplicationRecord
   end
 
   #This function updates the user avatar_url and google_auth_id
-  def self.update_user_credentials(user, auth)
-    user.avatar_url = auth.info.image
-    user.google_auth_uid = auth.uid
-    user.save
+  def update_user_credentials(auth)
+    self.avatar_url = auth.info.image
+    self.google_auth_uid = auth.uid
+    self.save
   end
 end
