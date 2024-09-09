@@ -1,0 +1,116 @@
+%h1 I am rendered using a HAML component.
+
+%template{"x-teleport" => "body"}
+  .fixed.inset-0.z-2000.overflow-y-auto{"x-show" => "modelOpen"}
+    .flex.items-end.justify-center.min-h-screen.px-4.text-center.md:items-center
+      .fixed.inset-0.transition-opacity.bg-slate-700.bg-opacity-40{"x-clock"=> "", "@click" => "modelOpen = false", "x-transition:enter" => "transition ease-out duration-300 transform", "x-transition:enter-start" => "opacity-0", "x-transition:enter-end"=>"opacity-100", "x-transition:leave"=>"transition ease-in duration-200 transform", "x-transition:leave-start"=>"opacity-100", "x-transition:leave-end"=>"opacity-0" }
+      .inline-block.w-full.max-w-3xl.my-20.overflow-hidden.text-left.transition-all.transform.bg-white.rounded-lg.shadow-xl.2xl:max-w-2xl{"x-clock"=> "","x-show"=>"modelOpen","x-transition:enter"=>"transition ease-out duration-300 transform", "x-transition:enter-start" => "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95", "x-transition:enter-end"=>"opacity-100 translate-y-0 sm:scale-100", "x-transition:leave"=>"transition ease-in duration-200 transform", "x-transition:leave-start"=>"opacity-100 translate-y-0 sm:scale-100", "x-transition:leave-end"=>"opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" }
+        .px-5.py-4.border-b.border-gray-200.bg-slate-50
+          .flex.items-center.justify-between.space-x-4
+            .inline-flex.items-center
+              %h1.text-lg.font-medium.text-slate-800.mb-0 Labsmart Doctor Portal
+              .inline-flex.items-center.ml-2.text-pink-600.bg-pink-100.px-2.py-1.rounded-lg
+                .text-xs.font-medium
+                  NEW LAUNCH
+
+%section.py-6.py-md-8.border-top.border-bottom.py-6
+  %h2.text-center.mb-6{style:"font-size: 37px;"}
+    %span.text-primary
+      Client testimonal
+  .container.videoContainer
+    .row.align-items-center.justify-content-center
+      .col-12.col-md-4.mb-6.mb-md-0
+        .img-fluid.cursor-pointer
+        .embed-responsive.embed-responsive-16by9.shadow-lg.border-slate-200.rounded-lg{:style => "display: none;"}
+          %iframe#client-video.embed-responsive-item{:allowfullscreen => "", "data-src" => "https://www.youtube.com/embed/di9BvhRdR2A", :frameborder => "0"}
+      .col-12.col-md-4.mb-6.mb-md-0
+        .img-fluid.cursor-pointer
+        .embed-responsive.embed-responsive-16by9.shadow-lg.border-slate-200.rounded-lg{:style => "display: none;"}
+          %iframe#client-video-second.embed-responsive-item{:allowfullscreen => "", "data-src" => "https://www.youtube.com/embed/mDeJk5rro0s", :frameborder => "0"}
+      .col-12.col-md-4.mb-6.mb-md-0
+        .img-fluid.cursor-pointer
+        .embed-responsive.embed-responsive-16by9.shadow-lg.border-slate-200.rounded-lg{:style => "display: none;"}
+          %iframe#client-video-third.embed-responsive-item{:allowfullscreen => "", "data-src" => "https://www.youtube.com/embed/BN9ztIf5LXg", :frameborder => "0"}
+
+
+%section.py-8
+  .container.videoContainer
+    .row.align-items-center.justify-content-between
+      .col-12.col-md-6.col-lg-6
+        %h2.text-3xl.font-medium.mb-4.text-blue-600 Customer Story
+        %p
+          Story of how Alpha Health Diagnostic Centre was started and how Labsmart became an important part of their journey.
+      .col-12.col-md-6.col-lg-6
+        .img-fluid
+        .embed-responsive.embed-responsive-16by9{:style => "display: none;"}
+          %iframe#customer-story-video.embed-responsive-item{:allowfullscreen => "", "data-src" => "https://www.youtube.com/embed/f9XiS1njLiU?start=39", :frameborder => "0"}
+
+%section.bg-primary.py-6
+  .container
+    %h1.text-center.text-white About us
+    %p.introduction-text.text-center.text-white
+      We are a young company, providing software solution to Diagnostic centres and Pathology labs, within and outside India. We have developed the software keeping in mind the needs of the diagnostic labs in the Indian healthcare market.
+
+%section.py-8
+  .container
+    .row
+      .col-12.col-md-5
+        .img-fluid
+      .col-12.col-md-7.pt-5
+        %h2 Abhishek Srivastava
+        %p.mb-0.font-italic Founder
+        %p.about-founder.pt-4
+          Being brought up in family of laboratory owners Abhishek has closely experienced the challenges
+          in running a diagnostic laboratory.
+          Labsmart is an attempt to bring a high quality affordable solution to small and medium
+          scale laboratories.
+    .row.pt-8
+      .col-12.col-md-5
+        .img-fluid
+      .col-12.col-md-7.pt-5
+        %h2 Deepa Dahiya
+        %p.mb-0.font-italic Lab Automation Consultant
+        %p.about-founder.pt-4
+          After working under a pathologist as a lab technician for 2 years, Deepa has taken up her role in Labsmart
+          and have helped over 1,000 labs to setup and use Labsmart.
+          Deepa is also holds Bsc. MLT degree.
+    .row.pt-8
+      .col-12.col-md-5
+        .img-fluid
+      .col-12.col-md-7.pt-5
+        %h2 Rinku Waghchoure
+        %p.mb-0.font-italic UI/UX Designer
+        %p.about-founder.pt-4
+          Rinku is our resident design dynamo at Labsmart. She is the one who crafts stunning user interfaces for our customers. She's a master of details, and makes sure that the design of every interface is pixel perfect.
+        %p.about-founder.pt-4
+          When Rinku isn't busy wowing us with her design skills, you'll find her traveling to new places, doing a move on the dance floor or geeking out over the latest gadgets. She injects an extra dose of creativity into her work keeping us on our toes
+
+    .row.pt-8
+      .col-12.col-md-5
+        .img-fluid
+      .col-12.col-md-7.pt-5
+        %h2 Sachin Patil
+        %p.mb-0.font-italic
+          Innovative Product Designer and UI Developer
+        %p.about-founder.pt-4
+          Sachin is the mastermind behind Labsmart's amazing product design and UI development. With a passion for creating user-friendly experiences, He is responsible for making our product look and feel great.
+        %p.about-founder.pt-4
+          Sachin is driven by a strong desire to deliver top-notch quality and loves to stays up-to-date with the latest design trends to ensure that our users have an engaging and enjoyable experience. Labsmart just got a whole lot cooler, thanks to Sachin's unmatched design skills and creativity!
+
+    .row.pt-8
+      .col-12.col-md-5
+        .img-fluid
+      .col-12.col-md-7.pt-5
+        %h2 Saubhik Bhaumik
+        %p.mb-0.font-italic Idea Machine | Founder's Office - Product & Strategy
+        %p.about-founder.pt-4
+          Saubhik Bhaumik is our Idea Machine. Go to the guy for resolving complicated product scenarios.
+          In a very short span of joining the company, Saubhik helped improve the sales process,
+          brought a lot of new ideas to the table, and helped implement long-pending complex features.
+
+%section.vision-section.py-6
+  .container
+    %h2.vision-heading.text-center Vision
+    %p.introduction-text.text-center
+      To provide a digital, reliable, efficient and secure solution, which enables laboratory owners to
+      run their business with peace of mind while delivering quality healthcare.

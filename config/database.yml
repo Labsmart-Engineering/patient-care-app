@@ -2,20 +2,17 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: misty
-  password: 12345
   host: localhost
 
 development:
   <<: *default
-  database: patients
+  database: patient_care_app
 
 test:
   <<: *default
-  database: patients
+  database: patient_care_app
 
 production:
-  <<: *default
-  database: patients
-  username: misty
-  password: 12345
+  url: <%= ENV['DATABASE_URL'] %>
+  variables:
+    statement_timeout: <%= ENV["STATEMENT_TIMEOUT"] || "5s" %>

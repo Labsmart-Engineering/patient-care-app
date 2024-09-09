@@ -1,3 +1,4 @@
-rails server/s = Starts the server
-rails generate controller home = Generates a route
-rails routes = Print all of the routes
+Welcome to Patient Care App
+
+Development notes:
+1. To compile tailwind locally run `./bin/dev`.

@@ -10,7 +10,28 @@
           <%= link_to 'Home', root_path, class: "nav-link active" %>
         </li>
         <% if user_signed_in? %>
-          <li class="nav-item">
+        <li class="nav-item">
+            <%=link_to 'Empty page', performance_test_empty_path, target: '_blank', class:"nav-link active"%>
+        </li>
+        <li class="nav-item">
+            <%=link_to 'Haml component', performance_test_complex_haml_component_path, target: '_blank', class:"nav-link active"%>
+        </li>
+        <li class="nav-item">
+            <%=link_to 'Erb component', performance_test_complex_erb_component_path, target: '_blank', class:"nav-link active"%>
+        </li>
+        <li class="nav-item">
+            <%=link_to 'Haml view', performance_test_complex_haml_view_path, target: '_blank', class:"nav-link active"%>
+        </li>
+        <li class="nav-item">
+            <%=link_to 'Erb view', performance_test_complex_erb_view_path, target: '_blank', class:"nav-link active"%>
+        </li>
+        <li class="nav-item">
+          <%=link_to 'Icon(helpers)', performance_test_icon_from_helper_path, target: '_blank', class:"nav-link active"%>
+        </li>
+        <li class="nav-item">
+          <%=link_to 'Icon(gem)', performance_test_icon_from_gem_path, target: '_blank', class:"nav-link active"%>
+        </li>
+          <% if user_signed_in? %><li class="nav-item">
             <%= link_to 'Patients List', patients_path, class: "nav-link" %>
           </li>
           <li class="nav-item">

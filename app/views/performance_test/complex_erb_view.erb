@@ -1,0 +1,167 @@
+<h1>I am rendered using a ERB view.</h1>
+
+<template x-teleport='body'>
+<div class='fixed inset-0 z-2000 overflow-y-auto' x-show='modelOpen'>
+<div class='flex items-end justify-center min-h-screen px-4 text-center md:items-center'>
+<div @click='modelOpen = false' class='fixed inset-0 transition-opacity bg-slate-700 bg-opacity-40' x-clock='' x-transition:enter='transition ease-out duration-300 transform' x-transition:enter-end='opacity-100' x-transition:enter-start='opacity-0' x-transition:leave='transition ease-in duration-200 transform' x-transition:leave-end='opacity-0' x-transition:leave-start='opacity-100'></div>
+<div class='inline-block w-full max-w-3xl my-20 overflow-hidden text-left transition-all transform bg-white rounded-lg shadow-xl 2xl:max-w-2xl' x-clock='' x-show='modelOpen' x-transition:enter='transition ease-out duration-300 transform' x-transition:enter-end='opacity-100 translate-y-0 sm:scale-100' x-transition:enter-start='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95' x-transition:leave='transition ease-in duration-200 transform' x-transition:leave-end='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95' x-transition:leave-start='opacity-100 translate-y-0 sm:scale-100'>
+<div class='px-5 py-4 border-b border-gray-200 bg-slate-50'>
+<div class='flex items-center justify-between space-x-4'>
+<div class='inline-flex items-center'>
+<h1 class='text-lg font-medium text-slate-800 mb-0'>Labsmart Doctor Portal</h1>
+<div class='inline-flex items-center ml-2 text-pink-600 bg-pink-100 px-2 py-1 rounded-lg'>
+<div class='text-xs font-medium'>
+NEW LAUNCH
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</template>
+<section class='py-6 py-md-8 border-top border-bottom py-6'>
+<h2 class='text-center mb-6' style='font-size: 37px;'>
+<span class='text-primary'>
+Client testimonal
+</span>
+</h2>
+<div class='container videoContainer'>
+<div class='row align-items-center justify-content-center'>
+<div class='col-12 col-md-4 mb-6 mb-md-0'>
+<div class='img-fluid cursor-pointer'></div>
+<div class='embed-responsive embed-responsive-16by9 shadow-lg border-slate-200 rounded-lg' style='display: none;'>
+<iframe allowfullscreen='' class='embed-responsive-item' data-src='https://www.youtube.com/embed/di9BvhRdR2A' frameborder='0' id='client-video'></iframe>
+</div>
+</div>
+<div class='col-12 col-md-4 mb-6 mb-md-0'>
+<div class='img-fluid cursor-pointer'></div>
+<div class='embed-responsive embed-responsive-16by9 shadow-lg border-slate-200 rounded-lg' style='display: none;'>
+<iframe allowfullscreen='' class='embed-responsive-item' data-src='https://www.youtube.com/embed/mDeJk5rro0s' frameborder='0' id='client-video-second'></iframe>
+</div>
+</div>
+<div class='col-12 col-md-4 mb-6 mb-md-0'>
+<div class='img-fluid cursor-pointer'></div>
+<div class='embed-responsive embed-responsive-16by9 shadow-lg border-slate-200 rounded-lg' style='display: none;'>
+<iframe allowfullscreen='' class='embed-responsive-item' data-src='https://www.youtube.com/embed/BN9ztIf5LXg' frameborder='0' id='client-video-third'></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class='py-8'>
+<div class='container videoContainer'>
+<div class='row align-items-center justify-content-between'>
+<div class='col-12 col-md-6 col-lg-6'>
+<h2 class='text-3xl font-medium mb-4 text-blue-600'>Customer Story</h2>
+<p>
+Story of how Alpha Health Diagnostic Centre was started and how Labsmart became an important part of their journey.
+</p>
+</div>
+<div class='col-12 col-md-6 col-lg-6'>
+<div class='img-fluid'></div>
+<div class='embed-responsive embed-responsive-16by9' style='display: none;'>
+<iframe allowfullscreen='' class='embed-responsive-item' data-src='https://www.youtube.com/embed/f9XiS1njLiU?start=39' frameborder='0' id='customer-story-video'></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class='bg-primary py-6'>
+<div class='container'>
+<h1 class='text-center text-white'>About us</h1>
+<p class='introduction-text text-center text-white'>
+We are a young company, providing software solution to Diagnostic centres and Pathology labs, within and outside India. We have developed the software keeping in mind the needs of the diagnostic labs in the Indian healthcare market.
+</p>
+</div>
+</section>
+<section class='py-8'>
+<div class='container'>
+<div class='row'>
+<div class='col-12 col-md-5'>
+<div class='img-fluid'></div>
+</div>
+<div class='col-12 col-md-7 pt-5'>
+<h2>Abhishek Srivastava</h2>
+<p class='mb-0 font-italic'>Founder</p>
+<p class='about-founder pt-4'>
+Being brought up in family of laboratory owners Abhishek has closely experienced the challenges
+in running a diagnostic laboratory.
+Labsmart is an attempt to bring a high quality affordable solution to small and medium
+scale laboratories.
+</p>
+</div>
+</div>
+<div class='row pt-8'>
+<div class='col-12 col-md-5'>
+<div class='img-fluid'></div>
+</div>
+<div class='col-12 col-md-7 pt-5'>
+<h2>Deepa Dahiya</h2>
+<p class='mb-0 font-italic'>Lab Automation Consultant</p>
+<p class='about-founder pt-4'>
+After working under a pathologist as a lab technician for 2 years, Deepa has taken up her role in Labsmart
+and have helped over 1,000 labs to setup and use Labsmart.
+Deepa is also holds Bsc. MLT degree.
+</p>
+</div>
+</div>
+<div class='row pt-8'>
+<div class='col-12 col-md-5'>
+<div class='img-fluid'></div>
+</div>
+<div class='col-12 col-md-7 pt-5'>
+<h2>Rinku Waghchoure</h2>
+<p class='mb-0 font-italic'>UI/UX Designer</p>
+<p class='about-founder pt-4'>
+Rinku is our resident design dynamo at Labsmart. She is the one who crafts stunning user interfaces for our customers. She's a master of details, and makes sure that the design of every interface is pixel perfect.
+</p>
+<p class='about-founder pt-4'>
+When Rinku isn't busy wowing us with her design skills, you'll find her traveling to new places, doing a move on the dance floor or geeking out over the latest gadgets. She injects an extra dose of creativity into her work keeping us on our toes
+</p>
+</div>
+</div>
+<div class='row pt-8'>
+<div class='col-12 col-md-5'>
+<div class='img-fluid'></div>
+</div>
+<div class='col-12 col-md-7 pt-5'>
+<h2>Sachin Patil</h2>
+<p class='mb-0 font-italic'>
+Innovative Product Designer and UI Developer
+</p>
+<p class='about-founder pt-4'>
+Sachin is the mastermind behind Labsmart's amazing product design and UI development. With a passion for creating user-friendly experiences, He is responsible for making our product look and feel great.
+</p>
+<p class='about-founder pt-4'>
+Sachin is driven by a strong desire to deliver top-notch quality and loves to stays up-to-date with the latest design trends to ensure that our users have an engaging and enjoyable experience. Labsmart just got a whole lot cooler, thanks to Sachin's unmatched design skills and creativity!
+</p>
+</div>
+</div>
+<div class='row pt-8'>
+<div class='col-12 col-md-5'>
+<div class='img-fluid'></div>
+</div>
+<div class='col-12 col-md-7 pt-5'>
+<h2>Saubhik Bhaumik</h2>
+<p class='mb-0 font-italic'>Idea Machine | Founder's Office - Product & Strategy</p>
+<p class='about-founder pt-4'>
+Saubhik Bhaumik is our Idea Machine. Go to the guy for resolving complicated product scenarios.
+In a very short span of joining the company, Saubhik helped improve the sales process,
+brought a lot of new ideas to the table, and helped implement long-pending complex features.
+</p>
+</div>
+</div>
+</div>
+</section>
+<section class='vision-section py-6'>
+<div class='container'>
+<h2 class='vision-heading text-center'>Vision</h2>
+<p class='introduction-text text-center'>
+To provide a digital, reliable, efficient and secure solution, which enables laboratory owners to
+run their business with peace of mind while delivering quality healthcare.
+</p>
+</div>
+</section>
+
