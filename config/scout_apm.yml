@@ -35,12 +35,11 @@ common: &defaults
 
 production:
   <<: *defaults
-  name: patient-care
   monitor: true
 
 development:
   <<: *defaults
-  monitor: true
+  monitor: false
 
 test:
   <<: *defaults
