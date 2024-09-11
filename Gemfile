@@ -30,7 +30,6 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 gem 'pg'
-gem 'scout_apm'
 
 
 # Use Redis adapter to run Action Cable in production
@@ -65,6 +64,10 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :production do
+  gem 'scout_apm'
 end
 
 group :test do
