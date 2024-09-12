@@ -68,6 +68,7 @@ end
 
 group :production do
   gem 'scout_apm'
+
 end
 
 group :test do
